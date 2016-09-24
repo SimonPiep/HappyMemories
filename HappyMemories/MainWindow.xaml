@@ -18,7 +18,7 @@
         <Button Height="50" Width="50" Margin="308,236,160.4,34" Click="Micro_click">
             <Button.Template>
                 <ControlTemplate>
-                    <Image x:Name="image" HorizontalAlignment="Left" VerticalAlignment="Top" Source="C:\Users\Simon\Desktop\Hackathon\HappyMemories\HappyMemories\mic.png"/>
+                    <Image x:Name="image" HorizontalAlignment="Left" VerticalAlignment="Top" Source="mic.png"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
