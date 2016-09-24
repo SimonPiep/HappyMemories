@@ -1,0 +1,16 @@
+﻿<Window x:Class="HappyMemories.TextShow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HappyMemories"
+        mc:Ignorable="d"
+        Title="TextShow" Height="300" Width="300">
+    <Grid>
+        <TextBlock x:Name="label" TextWrapping="WrapWithOverflow" Text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, "></TextBlock>
+        <Button x:Name="button" Content="OKAY" HorizontalAlignment="Left" Margin="210,242,0,0" VerticalAlignment="Top" Width="75"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="41" Margin="15,221,0,0" VerticalAlignment="Top" Width="40" Source="happy.jpg"/>
+        <Image x:Name="image1_Copy" HorizontalAlignment="Left" Height="41" Margin="60,221,0,0" VerticalAlignment="Top" Width="40" Source="happy.jpg"/>
+
+    </Grid>
+</Window>
