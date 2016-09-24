@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace HappyMemories
 {
@@ -47,7 +49,42 @@ namespace HappyMemories
 
             mems.Add(m);
 
-            updateFeelingsList();
+
+            speechProgress.Value = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                System.Threading.Thread.Sleep(250);
+
+            }
+            System.Threading.Thread.Sleep(500);
+
+
+
+            DispatcherTimer aTimer = new DispatcherTimer();
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+
+            this.speechProgress.Value = this.speechProgress.Value + 10;
+            this.speechProgress.UpdateLayout();
+            if (speechProgress.Value >= 100)
+                updateFeelingsList();
+
+        }
+
+        private void tick(object sender, EventArgs e)
+        {
+            this.speechProgress.Value = this.speechProgress.Value + 25;
+            this.speechProgress.UpdateLayout();
+            if (speechProgress.Value >= 100)
+            {
+                updateFeelingsList();
+                speechProgress.Value = 0;
+                dispatcherTimer.Stop();
+
+            }
 
         }
 
@@ -57,12 +94,12 @@ namespace HappyMemories
             {
                 TextBlock printTextBlock = new TextBlock();
                 string s;
-                s = DateTime.Now.Year.ToString() + "." + DateTime.Now.Month.ToString() + "." + DateTime.Now.Day.ToString() + " || " ;
+                s = DateTime.Now.Year.ToString() + "." + DateTime.Now.Month.ToString() + "." + DateTime.Now.Day.ToString() + " || ";
 
                 if (m.Thememory.Length > 25)
-                    s = s+ m.Thememory.Substring(0, 25) + "[...]";
+                    s = s + m.Thememory.Substring(0, 25) + "[...]";
                 else
-                    s =s+ m.Thememory;
+                    s = s + m.Thememory;
                 printTextBlock.Text = s;
 
                 Button btn = new Button();
@@ -79,5 +116,6 @@ namespace HappyMemories
         }
 
         private List<MyMemory> mems;
+        private DispatcherTimer dispatcherTimer;
     }
 }

@@ -10,12 +10,12 @@ namespace HappyMemories
     {
         public SpeechAnal()
         {
-
+            some = 0;
         }
+        private int some;
         public int callOnlineAPI(string input)
         {
-            Random rnd = new Random();
-            return rnd.Next(1, 3); 
+            return some++ % 3;
         }
     }
 
