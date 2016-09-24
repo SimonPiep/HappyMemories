@@ -11,3 +11,17 @@ C:\Users\Simon\Desktop\Hackathon\HappyMemories\HappyMemories\obj\Debug\HappyMemo
 C:\Users\Simon\Desktop\Hackathon\HappyMemories\HappyMemories\obj\Debug\HappyMemories.csproj.GenerateResource.Cache
 C:\Users\Simon\Desktop\Hackathon\HappyMemories\HappyMemories\obj\Debug\HappyMemories.exe
 C:\Users\Simon\Desktop\Hackathon\HappyMemories\HappyMemories\obj\Debug\HappyMemories.pdb
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\bin\Debug\HappyMemories.exe.config
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\bin\Debug\HappyMemories.exe
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\bin\Debug\HappyMemories.pdb
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\HappyMemories.csprojResolveAssemblyReference.cache
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\MainWindow.g.cs
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\App.g.cs
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\HappyMemories_MarkupCompile.cache
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\HappyMemories_MarkupCompile.lref
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\MainWindow.baml
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\HappyMemories.g.resources
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\HappyMemories.Properties.Resources.resources
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\HappyMemories.csproj.GenerateResource.Cache
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\HappyMemories.exe
+C:\Users\Johannes B\Desktop\GitHub ATT\HappyMemories\obj\Debug\HappyMemories.pdb
