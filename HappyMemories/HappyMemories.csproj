@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MyMemory.cs" />
+    <Compile Include="SpeechAnal.cs" />
     <Compile Include="TextShow.xaml.cs">
       <DependentUpon>TextShow.xaml</DependentUpon>
     </Compile>
@@ -101,6 +103,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="mic.png" />
+    <Resource Include="neutral.png" />
+    <Resource Include="sad.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
