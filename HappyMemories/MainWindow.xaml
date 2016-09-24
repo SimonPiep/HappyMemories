@@ -30,7 +30,7 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="27,236,0,0" TextWrapping="Wrap" Text="Input:" VerticalAlignment="Top"/>
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Height="208" Margin="10,10,0,0" VerticalAlignment="Top" Width="348">
-            <StackPanel x:Name="memStack" />
+            <StackPanel x:Name="memStack"     />
         </ScrollViewer>
     </Grid>
 </Window>
