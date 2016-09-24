@@ -6,5 +6,18 @@
         xmlns:local="clr-namespace:HappyMemories"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid/>
+    <Grid Margin="0,0,0,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="164*"/>
+
+        </Grid.RowDefinitions>
+        <Button x:Name="FeelHappy" Content=":)" HorizontalAlignment="Left" Height="26" Margin="382,223,0,0" VerticalAlignment="Top" Width="31" Click="FeelHappy_Click"/>
+        <Button x:Name="FeelOK" Content=":|" HorizontalAlignment="Left" Height="26" Margin="414,223,0,0" VerticalAlignment="Top" Width="31"/>
+        <Button x:Name="FeelSad" Content=":(" HorizontalAlignment="Left" Height="26" Margin="447,223,0,0" VerticalAlignment="Top" Width="30"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="61" Margin="314,233,0,0" VerticalAlignment="Top" Width="38" Source="mic.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="68" Margin="400,254,0,0" VerticalAlignment="Top" Width="63" Source="C:\Users\katja\Desktop\HappyMemories\HappyMemories\happy.jpg"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="59" Margin="62,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="241"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="27,236,0,0" TextWrapping="Wrap" Text="Input:" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Left" Height="208" Margin="10,10,0,0" VerticalAlignment="Top" Width="293"/>
+    </Grid>
 </Window>

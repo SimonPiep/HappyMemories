@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 namespace HappyMemories
 {
-    //test
+    /// test
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -26,6 +26,9 @@ namespace HappyMemories
             InitializeComponent();
         }
 
-        
+        private void FeelHappy_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
