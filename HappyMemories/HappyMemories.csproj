@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MyMemory.cs" />
+    <Compile Include="SpeechAnal.cs" />
     <Compile Include="TextShow.xaml.cs">
       <DependentUpon>TextShow.xaml</DependentUpon>
     </Compile>

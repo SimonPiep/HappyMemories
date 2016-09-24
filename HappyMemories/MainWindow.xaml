@@ -14,10 +14,23 @@
         <Button x:Name="FeelHappy" Content=":)" HorizontalAlignment="Left" Height="26" Margin="382,223,0,0" VerticalAlignment="Top" Width="31" Click="FeelHappy_Click"/>
         <Button x:Name="FeelOK" Content=":|" HorizontalAlignment="Left" Height="26" Margin="414,223,0,0" VerticalAlignment="Top" Width="31"/>
         <Button x:Name="FeelSad" Content=":(" HorizontalAlignment="Left" Height="26" Margin="447,223,0,0" VerticalAlignment="Top" Width="30"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="61" Margin="314,233,0,0" VerticalAlignment="Top" Width="38" Source="mic.png"/>
+
+        <Button Height="50" Width="50" Margin="308,236,160.4,34" Click="Micro_click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image x:Name="image" HorizontalAlignment="Left" VerticalAlignment="Top" Source="C:\Users\Simon\Desktop\Hackathon\HappyMemories\HappyMemories\mic.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+       
+        
         <Image x:Name="image1" HorizontalAlignment="Left" Height="68" Margin="400,254,0,0" VerticalAlignment="Top" Width="63" Source="C:\Users\katja\Desktop\HappyMemories\HappyMemories\happy.jpg"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="59" Margin="62,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="241"/>
+        <TextBox x:Name="TellMeInput" HorizontalAlignment="Left" Height="59" Margin="62,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="241"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="27,236,0,0" TextWrapping="Wrap" Text="Input:" VerticalAlignment="Top"/>
-        <StackPanel HorizontalAlignment="Left" Height="208" Margin="10,10,0,0" VerticalAlignment="Top" Width="293"/>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Height="208" Margin="10,10,0,0" VerticalAlignment="Top" Width="348">
+            <StackPanel x:Name="memStack" />
+        </ScrollViewer>
     </Grid>
 </Window>
