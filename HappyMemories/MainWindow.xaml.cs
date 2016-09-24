@@ -24,7 +24,9 @@ namespace HappyMemories
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show(System.IO.Directory.GetCurrentDirectory());
         }
+
 
         private void FeelHappy_Click(object sender, RoutedEventArgs e)
         {
