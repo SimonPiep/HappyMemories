@@ -23,10 +23,12 @@ namespace HappyMemories
     /// </summary>
     public partial class MainWindow : Window
     {
+        private SpeechAnal anaS;
         public MainWindow()
         {
             InitializeComponent();
-            MessageBox.Show(System.IO.Directory.GetCurrentDirectory());
+            anaS = new SpeechAnal();
+            //  MessageBox.Show(System.IO.Directory.GetCurrentDirectory());
         }
 
 
@@ -34,16 +36,16 @@ namespace HappyMemories
         {
 
         }
-
+       
         private void Micro_click(object sender, RoutedEventArgs e)
         {
             mems = new List<MyMemory>();
             MyMemory m = new MyMemory();
-            SpeechAnal a = new SpeechAnal();
+          
 
             m.Thememory = TellMeInput.Text;
 
-            var happiness = a.callOnlineAPI(m.Thememory);
+            var happiness = anaS.callOnlineAPI(m.Thememory);
 
             m.HappinessRating = happiness;
 
@@ -65,6 +67,8 @@ namespace HappyMemories
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+
+            speechProgress.Value = 25;
             dispatcherTimer.Start();
 
             this.speechProgress.Value = this.speechProgress.Value + 10;
@@ -83,7 +87,6 @@ namespace HappyMemories
                 updateFeelingsList();
                 speechProgress.Value = 0;
                 dispatcherTimer.Stop();
-
             }
 
         }
@@ -92,6 +95,13 @@ namespace HappyMemories
         {
             foreach (MyMemory m in mems)
             {
+                StackPanel myStack = new StackPanel();
+                myStack.Orientation = Orientation.Vertical;
+
+                StackPanel hs = new StackPanel();
+                myStack.Orientation = Orientation.Horizontal;
+
+
                 TextBlock printTextBlock = new TextBlock();
                 string s;
                 s = DateTime.Now.Year.ToString() + "." + DateTime.Now.Month.ToString() + "." + DateTime.Now.Day.ToString() + " || ";
@@ -103,16 +113,66 @@ namespace HappyMemories
                 printTextBlock.Text = s;
 
                 Button btn = new Button();
-                btn.Content = "More";
+                btn.Content = "Read it again";
+                btn.Click += new RoutedEventHandler(showOld);
 
                 Grid aGrid = new Grid();
                 aGrid.Height = 10;
 
-                memStack.Children.Add(printTextBlock);
-                memStack.Children.Add(btn);
-                memStack.Children.Add(aGrid);
+                hs.Children.Add(printTextBlock);
+                hs.Children.Add(btn);
+                hs.Children.Add(aGrid);
+
+
+                myStack.Children.Add(hs);
+                Image Img = new Image();
+
+                Uri uri;
+                
+                if(m.HappinessRating == 0)
+                {
+                    uri = new Uri("sad.png", UriKind.Relative);
+
+                }
+                else if(m.HappinessRating == 1)
+                {
+                    uri = new Uri("neutral.png", UriKind.Relative);
+
+                }
+                else
+                {
+                    uri = new Uri("happy.png", UriKind.Relative);
+
+                }
+
+
+
+                BitmapImage imgSource = new BitmapImage(uri);
+                Img.Source = imgSource;
+                Img.Width = 50;
+                Img.Height = 50;
+                Img.HorizontalAlignment = HorizontalAlignment.Right;
+
+                Grid ag = new Grid();
+                ag.Width = 20;
+
+
+                myStack.Children.Add(ag);
+
+                myStack.Children.Add(Img);
+                memStack.Children.Add(myStack);
+
+
+
+
 
             }
+        }
+
+        private void showOld(object sender, RoutedEventArgs e)
+        {
+            TextShow ts = new TextShow();
+            ts.Show();
         }
 
         private List<MyMemory> mems;

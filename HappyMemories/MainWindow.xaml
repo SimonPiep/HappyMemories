@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HappyMemories"
         mc:Ignorable="d"
-        Title="MainWindow" Height="402" Width="525">
-    <Grid Margin="0,0,0,0.5" Background="DarkGray">
+        Title="MainWindow" Height="402" Width="971.4">
+    <Grid Margin="0,0,3.8,0" Background="DarkGray">
         <Grid.RowDefinitions>
             <RowDefinition Height="371.2"/>
 
@@ -35,5 +35,6 @@
                 </TransformGroup>
             </ProgressBar.RenderTransform>
         </ProgressBar>
+        <Image x:Name="image" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Chart Happyness.png" Margin="513,10,0,0" Height="258" Width="437" />
     </Grid>
 </Window>
